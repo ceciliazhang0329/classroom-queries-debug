@@ -10,5 +10,7 @@ class EnrollmentsController < ApplicationController
     else
       redirect_to("/students/#{@enrollment.student_id}", { :notice => "Enrollment failed to create successfully." })
     end
+
+    render({ :template => "students/show" })
   end
 end
